@@ -2,7 +2,6 @@ var fs        = require('fs'),
     gulp      = require('gulp'),
     concat    = require('gulp-concat'),
     uglify    = require('gulp-uglify'),
-    header    = require('gulp-header'),
     jshint    = require('gulp-jshint'),
     sass      = require('gulp-sass'),
     rename    = require('gulp-rename'),
@@ -76,7 +75,6 @@ gulp.task('front-full', function() {
     return gulp.src(recipes.client.files)
         .pipe(concat(recipes.client.name))
         .pipe(wrap('(function(){\n"use strict";\n<%= contents %>\n})();'))
-        .pipe(header(banner, meta))
         .pipe(gulp.dest(recipes.client.path));
 });
 
@@ -85,7 +83,6 @@ gulp.task('front-min', function(){
         .pipe(concat(recipes.client.name))
         .pipe(uglify())
         .pipe(wrap('(function(){\n"use strict";\n<%= contents %>\n})();'))
-        .pipe(header(banner, meta))
         .pipe(gulp.dest(recipes.client.path));
 });
 

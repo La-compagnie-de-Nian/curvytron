@@ -18,6 +18,18 @@
         roomsController.createRoom();
     }
 
+    function launch() {
+        var roomController = getCurrentController();
+
+        // Ensure it's the room controller
+        if (!roomController.room) {
+            return;
+        }
+
+        // Set all players ready
+        roomController.launch();
+    }
+
     function createPlayers() {
         var roomController = getCurrentController(),
             total = roomController.room.players.items.length;
@@ -36,17 +48,7 @@
         }
     }
 
-    function launch() {
-        var roomController = getCurrentController();
 
-        // Ensure it's the room controller
-        if (!roomController.room) {
-            return;
-        }
-
-        // Set all players ready
-        roomController.launch();
-    }
 
     // Create a room
     createRoom();

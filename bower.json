@@ -23,7 +23,7 @@
       "homepage": "http://thomas.jarrand.fr"
     }
   ],
-  "main": "dist/curvytron.min.js",
+  "main": "dist/curvytron.js",
   "dependencies": {
     "tom32i-event-emitter.js": "~0.1.*",
     "tom32i-gamepad.js": "~0.1.*",
@@ -41,5 +41,8 @@
     "**/.*",
     "node_modules",
     "bower_components"
-  ]
+  ],
+  "resolutions": {
+    "angular": "1.4.3"
+  }
 }
