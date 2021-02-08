@@ -1,0 +1,24 @@
+{
+    "client": {
+        "name": "curvytron.js",
+        "path": "web/js/",
+        "files": [
+            "src/shared/**/*.js",
+            "src/client/controller/AbstractController.js",
+            "src/client/manager/BonusManager.js",
+            "src/client/*/**/*.js",
+            "src/client/*.js",
+            "!src/client/stressTest.js"
+        ]
+    },
+    "server": {
+        "name": "curvytron.js",
+        "path": "bin/",
+        "files": [
+            "src/server/dependencies.js",
+            "src/shared/**/*.js",
+            "src/server/*/**/*.js",
+            "src/server/launcher.js"
+        ]
+    }
+}
